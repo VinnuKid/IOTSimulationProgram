@@ -48,7 +48,7 @@ namespace SimulationDeviceforIOT
                     var messageString = JsonConvert.SerializeObject(telemetryDataPoint);
                     var message = new Message(Encoding.ASCII.GetBytes(messageString));
                     await deviceClient.SendEventAsync(message);
-                    Console.WriteLine("message sent : {1}", messageString);
+                    Console.WriteLine("message sent : {0}", messageString);
                     await Task.Delay(1000 * 10);
 
                 }
